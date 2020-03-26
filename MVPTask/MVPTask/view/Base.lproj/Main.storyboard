@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FirstVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FirstVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FirstVC" customModule="MVPTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="460-1j-X1h">
+                                <rect key="frame" x="30" y="290" width="315" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aIz-Ws-4Kb">
+                                <rect key="frame" x="30" y="360" width="315" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjO-3z-Pa2">
+                                <rect key="frame" x="60" y="470" width="255" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Fd-OR-u7E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aIz-Ws-4Kb" secondAttribute="trailing" constant="30" id="6s0-lD-SD4"/>
+                            <constraint firstItem="460-1j-X1h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EIh-oy-GVg"/>
+                            <constraint firstItem="aIz-Ws-4Kb" firstAttribute="top" secondItem="460-1j-X1h" secondAttribute="bottom" constant="40" id="Ngo-cy-03u"/>
+                            <constraint firstItem="kjO-3z-Pa2" firstAttribute="top" secondItem="aIz-Ws-4Kb" secondAttribute="bottom" constant="80" id="Wwg-0h-H8k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="460-1j-X1h" secondAttribute="trailing" constant="30" id="dNT-0L-sST"/>
+                            <constraint firstItem="aIz-Ws-4Kb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="eot-lT-Xgv"/>
+                            <constraint firstItem="460-1j-X1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gFy-FE-fJR"/>
+                            <constraint firstItem="460-1j-X1h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="270" id="gRP-ns-lh3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kjO-3z-Pa2" secondAttribute="trailing" constant="60" id="iSr-Hn-mBc"/>
+                            <constraint firstItem="kjO-3z-Pa2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="rPT-3H-JwS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTF" destination="aIz-Ws-4Kb" id="Ltw-Jp-x4q"/>
+                        <outlet property="usernameTF" destination="460-1j-X1h" id="aUr-qu-LM9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="Ey7-G3-ebD">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0XO-Ed-WHW" customClass="SecondVC" customModule="MVPTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dGl-PC-g7W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Successfully" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCZ-gd-syl">
+                                <rect key="frame" x="112.5" y="323" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWT-0E-kp8">
+                                <rect key="frame" x="100" y="439" width="175" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutBtn:" destination="0XO-Ed-WHW" eventType="touchUpInside" id="eBo-4u-WsB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kCZ-gd-syl" firstAttribute="centerY" secondItem="dGl-PC-g7W" secondAttribute="centerY" id="41K-iB-2uh"/>
+                            <constraint firstItem="gWT-0E-kp8" firstAttribute="top" secondItem="kCZ-gd-syl" secondAttribute="bottom" constant="95" id="IN3-3G-BxB"/>
+                            <constraint firstItem="jG9-qK-nRg" firstAttribute="trailing" secondItem="gWT-0E-kp8" secondAttribute="trailing" constant="100" id="SHx-PS-y7H"/>
+                            <constraint firstItem="gWT-0E-kp8" firstAttribute="leading" secondItem="jG9-qK-nRg" secondAttribute="leading" constant="100" id="dlZ-rS-TJE"/>
+                            <constraint firstItem="kCZ-gd-syl" firstAttribute="centerX" secondItem="dGl-PC-g7W" secondAttribute="centerX" id="keR-ae-Jvs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jG9-qK-nRg"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLbl" destination="kCZ-gd-syl" id="ZNd-v2-KMu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FxR-Lb-Fj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="27"/>
+        </scene>
+    </scenes>
+</document>
